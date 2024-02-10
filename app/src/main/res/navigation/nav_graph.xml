@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/batmanFragment2">
+
+    <fragment
+        android:id="@+id/batmanFragment2"
+        android:name="com.example.navigationapp.BatmanFragment"
+        android:label="fragment_batman"
+        tools:layout="@layout/fragment_batman" >
+        <action
+            android:id="@+id/action_batmanFragment2_to_capitanFragment2"
+            app:destination="@id/capitanFragment2"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/capitanFragment2"
+        android:name="com.example.navigationapp.CapitanFragment"
+        android:label="fragment_capitan"
+        tools:layout="@layout/fragment_capitan" >
+        <action
+            android:id="@+id/action_capitanFragment2_to_torFragment2"
+            app:destination="@id/torFragment2"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/spiderFragment2"
+        android:name="com.example.navigationapp.SpiderFragment"
+        android:label="fragment_spider"
+        tools:layout="@layout/fragment_spider" >
+        <action
+            android:id="@+id/action_spiderFragment2_to_batmanFragment2"
+            app:destination="@id/batmanFragment2"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/superFragment2"
+        android:name="com.example.navigationapp.SuperFragment"
+        android:label="fragment_super"
+        tools:layout="@layout/fragment_super" >
+        <action
+            android:id="@+id/action_superFragment2_to_spiderFragment2"
+            app:destination="@id/spiderFragment2"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/torFragment2"
+        android:name="com.example.navigationapp.TorFragment"
+        android:label="fragment_tor"
+        tools:layout="@layout/fragment_tor" >
+        <action
+            android:id="@+id/action_torFragment2_to_superFragment2"
+            app:destination="@id/superFragment2"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>
